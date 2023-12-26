@@ -17,7 +17,7 @@ func TestBinarySearch(t *testing.T) {
 		want int
 	}{
 		{
-			name: "target found",
+			name: "Found",
 			args: args{
 				arr:    []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				target: 5,
@@ -25,7 +25,7 @@ func TestBinarySearch(t *testing.T) {
 			want: 4,
 		},
 		{
-			name: "target not found",
+			name: "NotFound",
 			args: args{
 				arr:    []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 				target: 11,
@@ -33,7 +33,7 @@ func TestBinarySearch(t *testing.T) {
 			want: -1,
 		},
 		{
-			name: "empty list",
+			name: "EmptyList",
 			args: args{
 				arr:    []int{},
 				target: 5,
