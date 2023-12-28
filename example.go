@@ -38,8 +38,16 @@ func examplesChapter1() {
 
 func examplesChapter2() {
 	// Selection Sort
-	array := []int{64, 25, 12, 22, 11}
-	fmt.Println("[Selection Sort] Unsorted array:", array)
-	sortedArray := chapter2.SelectionSort(array)
-	fmt.Println("[Selection Sort] Sorted array:", sortedArray)
+	arr := []int{64, 25, 12, 22, 11}
+	fmt.Println("[Selection Sort] Unsorted array:", arr)
+	sorted := chapter2.SelectionSort(arr)
+	fmt.Println("[Selection Sort] Sorted array:", sorted)
+
+	// Linked List
+	linkedList := chapter2.NewLinkedList()
+	linkedList.Append(1)
+	linkedList.Append(2)
+	linkedList.Append(3)
+	fmt.Print("[Linked List] ")
+	linkedList.Display()
 }

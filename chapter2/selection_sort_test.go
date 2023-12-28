@@ -1,8 +1,10 @@
-package chapter2
+package chapter2_test
 
 import (
 	"reflect"
 	"testing"
+
+	"github.com/matheusfbosa/grokking-algorithms/chapter2"
 )
 
 func TestSelectionSort(t *testing.T) {
@@ -19,7 +21,8 @@ func TestSelectionSort(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := SelectionSort(tt.input)
+			result := chapter2.SelectionSort(tt.input)
+
 			if !reflect.DeepEqual(result, tt.output) {
 				t.Errorf("Expected %v, got %v", tt.output, result)
 			}
