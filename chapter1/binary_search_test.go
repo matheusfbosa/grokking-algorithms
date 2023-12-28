@@ -41,6 +41,7 @@ func TestBinarySearch(t *testing.T) {
 			want: -1,
 		},
 	}
+
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := chapter1.BinarySearch(tt.args.arr, tt.args.target); got != tt.want {
