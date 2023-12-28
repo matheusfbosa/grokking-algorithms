@@ -4,10 +4,12 @@ import (
 	"fmt"
 
 	"github.com/matheusfbosa/grokking-algorithms/chapter1"
+	"github.com/matheusfbosa/grokking-algorithms/chapter2"
 )
 
 func main() {
-	examplesChapter1()
+	//examplesChapter1()
+	examplesChapter2()
 }
 
 func examplesChapter1() {
@@ -32,4 +34,12 @@ func examplesChapter1() {
 	if bstResult != nil {
 		fmt.Printf("\n[BST] Element %d found in the tree\n", targetVal)
 	}
+}
+
+func examplesChapter2() {
+	// Selection Sort
+	array := []int{64, 25, 12, 22, 11}
+	fmt.Println("[Selection Sort] Unsorted array:", array)
+	sortedArray := chapter2.SelectionSort(array)
+	fmt.Println("[Selection Sort] Sorted array:", sortedArray)
 }
