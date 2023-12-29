@@ -5,11 +5,13 @@ import (
 
 	"github.com/matheusfbosa/grokking-algorithms/chapter1"
 	"github.com/matheusfbosa/grokking-algorithms/chapter2"
+	"github.com/matheusfbosa/grokking-algorithms/chapter3"
 )
 
 func main() {
 	//examplesChapter1()
-	examplesChapter2()
+	//examplesChapter2()
+	examplesChapter3()
 }
 
 func examplesChapter1() {
@@ -50,4 +52,9 @@ func examplesChapter2() {
 	linkedList.Append(3)
 	fmt.Print("[Linked List] ")
 	linkedList.Display()
+}
+
+func examplesChapter3() {
+	// Recursion
+	fmt.Printf("[Recursion] %d! = %d\n", 5, chapter3.Factorial(5))
 }
