@@ -6,12 +6,14 @@ import (
 	"github.com/matheusfbosa/grokking-algorithms/chapter1"
 	"github.com/matheusfbosa/grokking-algorithms/chapter2"
 	"github.com/matheusfbosa/grokking-algorithms/chapter3"
+	"github.com/matheusfbosa/grokking-algorithms/chapter4"
 )
 
 func main() {
 	//examplesChapter1()
 	//examplesChapter2()
-	examplesChapter3()
+	//examplesChapter3()
+	examplesChapter4()
 }
 
 func examplesChapter1() {
@@ -57,4 +59,12 @@ func examplesChapter2() {
 func examplesChapter3() {
 	// Recursion
 	fmt.Printf("[Recursion] %d! = %d\n", 5, chapter3.Factorial(5))
+}
+
+func examplesChapter4() {
+	// Divide and Conquer
+	arr := []int{9, 12, 1, 5, 6, 3}
+	fmt.Printf("[DC] Sum(%v) = %d\n", arr, chapter4.Sum(arr))
+	fmt.Printf("[DC] Count(%v) = %d\n", arr, chapter4.Count(arr))
+	fmt.Printf("[DC] Max(%v) = %d\n", arr, chapter4.Max(arr))
 }
