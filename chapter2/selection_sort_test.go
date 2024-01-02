@@ -18,7 +18,6 @@ func TestSelectionSort(t *testing.T) {
 		{"Unique", []int{1, 1, 1}, []int{1, 1, 1}},
 		{"Empty", []int{}, []int{}},
 	}
-
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			result := chapter2.SelectionSort(tt.input)

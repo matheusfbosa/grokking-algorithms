@@ -17,3 +17,11 @@ To run the tests and ensure the correctness of the implemented algorithms, use t
 ```sh
 make test
 ```
+
+## Benchmarking
+
+To execute benchmark tests for algorithms that have them and compare their performance, use the following command:
+
+```sh
+make bench
+```

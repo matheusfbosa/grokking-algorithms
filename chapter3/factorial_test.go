@@ -20,7 +20,6 @@ func TestFactorial(t *testing.T) {
 		{"5!", 5, 120},
 		{"10!", 10, 3628800},
 	}
-
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := chapter3.Factorial(tt.n); got != tt.want {
@@ -44,7 +43,6 @@ func TestFactorialTailRecursion(t *testing.T) {
 		{"5!", 5, 120},
 		{"10!", 10, 3628800},
 	}
-
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := chapter3.FactorialTailRecursion(tt.n); got != tt.want {

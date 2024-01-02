@@ -7,6 +7,7 @@ import (
 	"github.com/matheusfbosa/grokking-algorithms/chapter2"
 	"github.com/matheusfbosa/grokking-algorithms/chapter3"
 	"github.com/matheusfbosa/grokking-algorithms/chapter4"
+	"github.com/matheusfbosa/grokking-algorithms/helper"
 )
 
 func main() {
@@ -18,7 +19,7 @@ func main() {
 
 func examplesChapter1() {
 	// Binary Search
-	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	arr := helper.MakeRandomArray(5, 0, 10)
 	bsTarget := 5
 	bsResult := chapter1.BinarySearch(arr, bsTarget)
 	if bsResult != -1 {
@@ -27,7 +28,7 @@ func examplesChapter1() {
 
 	// Binary Search Tree (BST)
 	var root *chapter1.Node
-	keys := []int{8, 3, 10, 1, 6, 14, 4, 7, 13}
+	keys := helper.MakeRandomArray(5, 0, 10)
 	for _, key := range keys {
 		root = root.Insert(key)
 	}
@@ -42,7 +43,7 @@ func examplesChapter1() {
 
 func examplesChapter2() {
 	// Selection Sort
-	arr := []int{64, 25, 12, 22, 11}
+	arr := helper.MakeRandomArray(10, -100, 100)
 	fmt.Println("[Selection Sort] Unsorted array:", arr)
 	sorted := chapter2.SelectionSort(arr)
 	fmt.Println("[Selection Sort] Sorted array:", sorted)
@@ -63,8 +64,14 @@ func examplesChapter3() {
 
 func examplesChapter4() {
 	// Divide and Conquer
-	arr := []int{9, 12, 1, 5, 6, 3}
+	arr := helper.MakeRandomArray(10, 0, 10)
 	fmt.Printf("[DC] Sum(%v) = %d\n", arr, chapter4.Sum(arr))
 	fmt.Printf("[DC] Count(%v) = %d\n", arr, chapter4.Count(arr))
 	fmt.Printf("[DC] Max(%v) = %d\n", arr, chapter4.Max(arr))
+
+	// Sort
+	arr = helper.MakeRandomArray(10, -100, 100)
+	fmt.Printf("[QuickSort] Unsorted array: %v\n", arr)
+	fmt.Printf("[QuickSort] Sorted array: %v\n", chapter4.QuickSort(arr))
+	fmt.Printf("[MergeSort] Sorted array: %v\n", chapter4.MergeSort(arr))
 }
