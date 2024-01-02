@@ -7,6 +7,7 @@ import (
 	"github.com/matheusfbosa/grokking-algorithms/chapter2"
 	"github.com/matheusfbosa/grokking-algorithms/chapter3"
 	"github.com/matheusfbosa/grokking-algorithms/chapter4"
+	"github.com/matheusfbosa/grokking-algorithms/chapter5"
 	"github.com/matheusfbosa/grokking-algorithms/helper"
 )
 
@@ -14,7 +15,8 @@ func main() {
 	//examplesChapter1()
 	//examplesChapter2()
 	//examplesChapter3()
-	examplesChapter4()
+	//examplesChapter4()
+	examplesChapter5()
 }
 
 func examplesChapter1() {
@@ -74,4 +76,10 @@ func examplesChapter4() {
 	fmt.Printf("[QuickSort] Unsorted array: %v\n", arr)
 	fmt.Printf("[QuickSort] Sorted array: %v\n", chapter4.QuickSort(arr))
 	fmt.Printf("[MergeSort] Sorted array: %v\n", chapter4.MergeSort(arr))
+}
+
+func examplesChapter5() {
+	// Hash
+	fmt.Printf("[Hash] SHA256(a) = %s\n", chapter5.CalculateHash("a"))
+	fmt.Printf("[Hash] SHA256(b) = %s\n", chapter5.CalculateHash("b"))
 }
