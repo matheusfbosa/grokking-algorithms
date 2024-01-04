@@ -8,6 +8,7 @@ import (
 	"github.com/matheusfbosa/grokking-algorithms/chapter3"
 	"github.com/matheusfbosa/grokking-algorithms/chapter4"
 	"github.com/matheusfbosa/grokking-algorithms/chapter5"
+	"github.com/matheusfbosa/grokking-algorithms/chapter6"
 	"github.com/matheusfbosa/grokking-algorithms/helper"
 )
 
@@ -16,7 +17,8 @@ func main() {
 	//examplesChapter2()
 	//examplesChapter3()
 	//examplesChapter4()
-	examplesChapter5()
+	//examplesChapter5()
+	examplesChapter6()
 }
 
 func examplesChapter1() {
@@ -82,4 +84,21 @@ func examplesChapter5() {
 	// Hash
 	fmt.Printf("[Hash] SHA256(a) = %s\n", chapter5.CalculateHash("a"))
 	fmt.Printf("[Hash] SHA256(b) = %s\n", chapter5.CalculateHash("b"))
+}
+
+func examplesChapter6() {
+	// Graph
+	vertices := map[string][]string{
+		"you":    {"alice", "bob", "claire"},
+		"bob":    {"anuj", "peggy"},
+		"alice":  {"peggy"},
+		"claire": {"thom", "jonny"},
+		"anuj":   {},
+		"peggy":  {},
+		"thom":   {},
+		"jonny":  {},
+	}
+	graph := chapter6.NewGraph(vertices)
+	fmt.Printf("[BFS] Searching for salesperson in graph: %v\n", graph.Vertices)
+	fmt.Printf("[BFS] Found: %t\n", graph.BreadthFirstSearch("you"))
 }
