@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 
 	"github.com/matheusfbosa/grokking-algorithms/chapter1"
 	"github.com/matheusfbosa/grokking-algorithms/chapter2"
@@ -9,6 +10,7 @@ import (
 	"github.com/matheusfbosa/grokking-algorithms/chapter4"
 	"github.com/matheusfbosa/grokking-algorithms/chapter5"
 	"github.com/matheusfbosa/grokking-algorithms/chapter6"
+	"github.com/matheusfbosa/grokking-algorithms/chapter7"
 	"github.com/matheusfbosa/grokking-algorithms/helper"
 )
 
@@ -18,7 +20,8 @@ func main() {
 	//examplesChapter3()
 	//examplesChapter4()
 	//examplesChapter5()
-	examplesChapter6()
+	//examplesChapter6()
+	examplesChapter7()
 }
 
 func examplesChapter1() {
@@ -101,4 +104,27 @@ func examplesChapter6() {
 	graph := chapter6.NewGraph(vertices)
 	fmt.Printf("[BFS] Searching for salesperson in graph: %v\n", graph.Vertices)
 	fmt.Printf("[BFS] Found: %t\n", graph.BreadthFirstSearch("you"))
+}
+
+func examplesChapter7() {
+	// Dijkstra
+	graph := map[string]map[string]int{
+		"start": {"a": 6, "b": 2},
+		"a":     {"end": 1},
+		"b":     {"a": 3, "end": 5},
+		"end":   {},
+	}
+	costs := map[string]float64{"a": 6, "b": 2, "end": math.Inf(1)}
+	parents := map[string]string{
+		"a":   "start",
+		"b":   "start",
+		"end": "",
+	}
+
+	dijkstra := chapter7.NewDijkstra(graph, costs, parents)
+	dijkstra.Run()
+
+	fmt.Println("[Dijkstra] Graph:", dijkstra.Graph)
+	fmt.Println("[Dijkstra] Final costs:", dijkstra.Costs)
+	fmt.Println("[Dijkstra] Final parents:", dijkstra.Parents)
 }
