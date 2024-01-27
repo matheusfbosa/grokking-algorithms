@@ -11,6 +11,7 @@ import (
 	"github.com/matheusfbosa/grokking-algorithms/chapter5"
 	"github.com/matheusfbosa/grokking-algorithms/chapter6"
 	"github.com/matheusfbosa/grokking-algorithms/chapter7"
+	"github.com/matheusfbosa/grokking-algorithms/chapter8"
 	"github.com/matheusfbosa/grokking-algorithms/helper"
 )
 
@@ -21,7 +22,8 @@ func main() {
 	//examplesChapter4()
 	//examplesChapter5()
 	//examplesChapter6()
-	examplesChapter7()
+	//examplesChapter7()
+	examplesChapter8()
 }
 
 func examplesChapter1() {
@@ -127,4 +129,25 @@ func examplesChapter7() {
 	fmt.Println("[Dijkstra] Graph:", dijkstra.Graph)
 	fmt.Println("[Dijkstra] Final costs:", dijkstra.Costs)
 	fmt.Println("[Dijkstra] Final parents:", dijkstra.Parents)
+}
+
+func examplesChapter8() {
+	// Greedy Algorithms
+	statesToCover := map[string]bool{
+		"mt": true, "wa": true, "or": true, "id": true, "nv": true, "ut": true, "ca": true, "az": true,
+	}
+	fmt.Println("[Greedy Algorithms] States to cover:", statesToCover)
+
+	radioStations := map[string]map[string]bool{
+		"kone":   {"id": true, "nv": true, "ut": true},
+		"ktwo":   {"wa": true, "id": true, "mt": true},
+		"kthree": {"or": true, "nv": true, "ca": true},
+		"kfour":  {"nv": true, "ut": true},
+		"kfive":  {"ca": true, "az": true},
+	}
+
+	finalRadioStations := chapter8.FindFinalRadioStations(statesToCover, radioStations)
+	fmt.Println("[Greedy Algorithms] States to cover:", statesToCover)
+	fmt.Println("[Greedy Algorithms] Radio stations:", radioStations)
+	fmt.Println("[Greedy Algorithms] Final radio stations:", finalRadioStations)
 }
