@@ -12,6 +12,7 @@ My notes while reading [Grokking Algorithms by Aditya Bhargava](https://www.mann
 6. [Breadth-First Search (BFS)](./chapter6)
 7. [Dijkstra's Algorithm](./chapter7)
 8. [Greedy Algorithm](./chapter8)
+9. [Dynamic Programming](./chapter9)
 
 ## Examples
 

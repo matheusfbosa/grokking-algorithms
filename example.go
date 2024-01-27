@@ -12,6 +12,7 @@ import (
 	"github.com/matheusfbosa/grokking-algorithms/chapter6"
 	"github.com/matheusfbosa/grokking-algorithms/chapter7"
 	"github.com/matheusfbosa/grokking-algorithms/chapter8"
+	"github.com/matheusfbosa/grokking-algorithms/chapter9"
 	"github.com/matheusfbosa/grokking-algorithms/helper"
 )
 
@@ -23,7 +24,8 @@ func main() {
 	//examplesChapter5()
 	//examplesChapter6()
 	//examplesChapter7()
-	examplesChapter8()
+	//examplesChapter8()
+	examplesChapter9()
 }
 
 func examplesChapter1() {
@@ -150,4 +152,17 @@ func examplesChapter8() {
 	fmt.Println("[Greedy Algorithms] States to cover:", statesToCover)
 	fmt.Println("[Greedy Algorithms] Radio stations:", radioStations)
 	fmt.Println("[Greedy Algorithms] Final radio stations:", finalRadioStations)
+}
+
+func examplesChapter9() {
+	// Dynamic Programming
+	blue := "blue"
+	clues := "clues"
+	fmt.Printf("[Dynamic Programming] LongestCommonSubstring(%s, %s): %s\n",
+		blue, clues, chapter9.LongestCommonSubstring(blue, clues))
+
+	fish := "fish"
+	fosh := "fosh"
+	fmt.Printf("[Dynamic Programming] LongestCommonSubsequence(%s, %s): %d\n",
+		fish, fosh, chapter9.LongestCommonSubsequence(fish, fosh))
 }
