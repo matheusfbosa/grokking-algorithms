@@ -5,6 +5,7 @@ import (
 	"math"
 
 	"github.com/matheusfbosa/grokking-algorithms/chapter1"
+	"github.com/matheusfbosa/grokking-algorithms/chapter10"
 	"github.com/matheusfbosa/grokking-algorithms/chapter2"
 	"github.com/matheusfbosa/grokking-algorithms/chapter3"
 	"github.com/matheusfbosa/grokking-algorithms/chapter4"
@@ -18,14 +19,15 @@ import (
 
 func main() {
 	//examplesChapter1()
-	//examplesChapter2()
-	//examplesChapter3()
-	//examplesChapter4()
-	//examplesChapter5()
-	//examplesChapter6()
-	//examplesChapter7()
-	//examplesChapter8()
+	examplesChapter2()
+	examplesChapter3()
+	examplesChapter4()
+	examplesChapter5()
+	examplesChapter6()
+	examplesChapter7()
+	examplesChapter8()
 	examplesChapter9()
+	examplesChapter10()
 }
 
 func examplesChapter1() {
@@ -165,4 +167,20 @@ func examplesChapter9() {
 	fosh := "fosh"
 	fmt.Printf("[Dynamic Programming] LongestCommonSubsequence(%s, %s): %d\n",
 		fish, fosh, chapter9.LongestCommonSubsequence(fish, fosh))
+}
+
+func examplesChapter10() {
+	// K-Nearest Neighbors
+	xTrain := [][]float64{
+		{1, 2}, {2, 3}, {3, 1}, {4, 2}, {5, 4}, {6, 5}, {7, 6}, {8, 5},
+	}
+	yTrain := []string{"A", "A", "A", "A", "B", "B", "B", "B"}
+	xTest := []float64{2.5, 2}
+
+	k := 3
+	yTest := chapter10.KNN(xTrain, yTrain, xTest, k)
+
+	fmt.Println("[KNN] xTrain:", xTrain)
+	fmt.Println("[KNN] yTrain (labels):", yTrain)
+	fmt.Printf("[KNN] Prediction for %v: %s\n", xTest, yTest)
 }
